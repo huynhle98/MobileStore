@@ -6,7 +6,7 @@ import { Component, OnInit , Input} from '@angular/core';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  @Input() items = [1, 2, 3, 4, 5];
+  items = [1, 2, 3, 4, 5];
   constructor( ) {
 
    }
