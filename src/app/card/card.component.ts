@@ -15,6 +15,11 @@ export class CardComponent implements OnInit {
     this.cart.forEach(element => {
       if(element["name"] === productName) {
         this.cart.splice(this.cart.indexOf(element), 1);
+        localStorage.setItem("cart", JSON.stringify(this.cart))
+        this.totalPrice = 0
+        for(let i = 0; i < this.cart.length; i++) {
+          this.totalPrice += this.cart[i]["price"]
+        }
       }
     });
   }

@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class ProductsComponent implements OnInit {
   public productNames = []
   public stringProductName = ''
-
+  public productNumber = 0
   public products = [
     {
       productname: 'Iphone X',
@@ -50,6 +50,8 @@ export class ProductsComponent implements OnInit {
   }
 
   list = () => {
+    let productNumber = JSON.parse(localStorage.getItem("cart"))
+    this.productNumber = productNumber.length
     this.AuthenticationServiceListProduct.list().subscribe(
       (data) => {
         if (data != null && data.length != 0) {
