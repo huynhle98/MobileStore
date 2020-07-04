@@ -1,0 +1,60 @@
+<app-header title="Cart" subtitle="All the selected products in your cart" button="logout"></app-header>
+<!-- row 1 -->
+<div class="container">
+    <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
+        <div class="col-6">
+            <button type="button" class="btn btn-danger" style="float: left;">Clear Cart</button>
+        </div>
+        <div class="col-6">
+            <button type="button" class="btn btn-success" style="float: right;">Check Out</button>
+        </div>
+    </div>
+</div>
+<!-- row 2 -->
+<div class="container">
+    <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
+        <div class="col-10">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Unit price</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- khi nào có data bind vào tr này -->
+                    <tr>
+                        <th scope="row">Iphone X</th>
+                        <td>1</td>
+                        <td>1099</td>
+                        <td>1099</td>
+                        <td>
+                            <button type="button" class="btn btn-danger" style="float: left;">Remove</button>
+                        </td>
+                    </tr>
+                    <!-- Hard row -->
+                    <tr>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td>Grand Total</td>
+                        <td>2807</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- row 4 -->
+<div class="container">
+    <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
+        <div class="col-6">
+            <button type="button" class="btn btn-success" style="float: left;" routerLink="/products">Continue
+                Shopping</button>
+        </div>
+    </div>
+</div>
