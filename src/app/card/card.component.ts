@@ -14,9 +14,7 @@ export class CardComponent implements OnInit {
   handleRemoveProduct = (productName) => {
     this.cart.forEach(element => {
       if(element["name"] === productName) {
-        console.log("AAAAAAAAa")
-        // console.log(element.indexOf(productName))
-        // this.cart.splice(this.cart.indexOf(productName), 1);
+        this.cart.splice(this.cart.indexOf(element), 1);
       }
     });
   }
