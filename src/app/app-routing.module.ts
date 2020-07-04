@@ -7,7 +7,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { CardComponent } from './card/card.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/login' },
+  { path: '', pathMatch: 'full', redirectTo: '/products' },
   {
     path: 'login',
     component: LoginComponent
