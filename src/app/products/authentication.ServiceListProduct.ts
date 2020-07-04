@@ -11,7 +11,7 @@ import { map } from 'rxjs/operators';
 export class AuthenticationServiceListProduct {
     private currentProductListSubject: BehaviorSubject<ProductList>;
     public currentProductList: Observable<ProductList>;
-    private urlAPI = "http://332048d7d396.ngrok.io";
+    private urlAPI = "http://localhost:8080";
     constructor(private http: HttpClient) {
         
     }

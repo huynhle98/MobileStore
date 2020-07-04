@@ -1,9 +1,9 @@
-<app-header title="Cart" subtitle="All the selected products in your cart" button="logout"></app-header>
+<app-header title="Cart" subtitle="All the selected products in your cart" button=""></app-header>
 <!-- row 1 -->
 <div class="container">
     <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
         <div class="col-6">
-            <button type="button" class="btn btn-danger" style="float: left;">Clear Cart</button>
+            <button type="button" class="btn btn-danger" style="float: left;" (click)="handleCleanCart()">Clear Cart</button>
         </div>
         <div class="col-6">
             <button type="button" class="btn btn-success" style="float: right;">Check Out</button>

@@ -1,4 +1,4 @@
-<app-header title="Products" subtitle="All the available products in our store" button="view-cart" count="{{productNumber}}"></app-header>
+<app-header title="Products" subtitle="All the available products in our store" button="view-cart" count="{{[(productNumber)]}}"></app-header>
 <div class="container">
   <div class="card-deck">
     <div class="card" *ngFor="let product of products">

@@ -1,4 +1,4 @@
-<app-header title="Product" subtitle="" button=""></app-header>
+<app-header title="Product" subtitle="" button="view-cart" count="{{[(productNumber)]}}"></app-header>
 <div class="container">
   <div class="product-dettail">
     <div class="col-product-content left">
@@ -36,7 +36,7 @@
 
       <div class="gr-btn-product-detail">
         <a href="#" class="btn btn-success" routerLink="/products"><i class="fas fa-arrow-circle-left"></i> Back</a>
-        <a href="#" class="btn btn-warning"><i class="fas fa-shopping-cart"></i> Order</a>
+        <a class="btn btn-warning" (click)="handleClickOrderNow(productItem.name)"><i class="fas fa-shopping-cart"></i> Order</a>
       </div>
     </div>
   </div>

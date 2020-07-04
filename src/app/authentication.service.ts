@@ -11,7 +11,7 @@ import { map } from 'rxjs/operators';
 export class AuthenticationService {
     private currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;
-    private urlAPI = 'http://332048d7d396.ngrok.io';
+    private urlAPI = 'http://localhost:8080';
     constructor(private http: HttpClient) {
         this.currentUserSubject = new BehaviorSubject<User>(
             JSON.parse(localStorage.getItem('currentUser'))

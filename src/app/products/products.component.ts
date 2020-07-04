@@ -50,8 +50,7 @@ export class ProductsComponent implements OnInit {
   }
 
   list = () => {
-    let productNumber = JSON.parse(localStorage.getItem("cart"))
-    this.productNumber = productNumber.length
+    
     this.AuthenticationServiceListProduct.list().subscribe(
       (data) => {
         if (data != null && data.length != 0) {
@@ -96,6 +95,7 @@ export class ProductsComponent implements OnInit {
             cart.push(product)
           }
           localStorage.setItem("cart", JSON.stringify(cart))
+          this.productNumber++
         } else {
           let product = {
             name: element["name"],
@@ -112,6 +112,10 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit() {
     this.list()
+    let productNumber = JSON.parse(localStorage.getItem("cart"))
+    for(let i = 0; i < productNumber.length; i++) {
+      this.productNumber += productNumber[i]["amount"] 
+    }
   }
 
 }

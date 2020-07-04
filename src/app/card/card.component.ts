@@ -24,6 +24,12 @@ export class CardComponent implements OnInit {
     });
   }
 
+  handleCleanCart = () => {
+    this.cart = []
+    localStorage.setItem("cart", JSON.stringify(this.cart))
+    this.totalPrice = 0
+  }
+
   ngOnInit() {
     for(let i = 0; i < this.cart.length; i++) {
       this.totalPrice += this.cart[i]["price"]
