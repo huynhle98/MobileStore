@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
   @Input() title = '';
   @Input() subtitle = '';
   @Input() button = '';
-
+  @Input() countcart  = 0;
   constructor(
     private authenticationService: AuthenticationService,
     private router: Router ) {

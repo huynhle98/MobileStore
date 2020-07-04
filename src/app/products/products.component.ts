@@ -74,25 +74,26 @@ export class ProductsComponent implements OnInit {
       if(element["name"] === productName) {
         if(JSON.parse(localStorage.getItem("cart")) != null) {
           cart = JSON.parse(localStorage.getItem("cart"))
+          let count = 0
           for( let i =0; i < cart.length; i++) {
             if(cart[i]["name"] === element["name"]) {
               cart[i]["amount"]++
-              cart[i]["price"] = cart["unitprice"] * cart["amount"]
-              localStorage.setItem("cart", JSON.stringify(cart))
+              cart[i]["price"] = cart[i]["unitprice"] * cart[i]["amount"]
               break
             } else {
-              let product = {
-                name: element["name"],
-                unitprice: element["price"],
-                price: element["price"],
-                amount: 1
-              }
-              cart.push(product)
-              localStorage.setItem("cart", JSON.stringify(cart))
-              break
+              count++
             }
           }
-          console.log(cart)
+          if(count === cart.length) {
+            let product = {
+              name: element["name"],
+              unitprice: element["price"],
+              price: element["price"],
+              amount: 1
+            }
+            cart.push(product)
+          }
+          localStorage.setItem("cart", JSON.stringify(cart))
         } else {
           let product = {
             name: element["name"],
